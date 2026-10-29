@@ -138,4 +138,4 @@ This is personal portfolio work, not an official university publication or a cla
 
 ## Acknowledgements
 
-We thank our course instructor, [Peter Gloor](https://www.linkedin.com/in/petergloor/), for his teaching and for helping us understand collaborative innovation networks and team communication.
+We thank our course instructor, [Peter Gloor](https://cci.mit.edu/pgloor/), for his teaching and for helping us understand collaborative innovation networks and team communication.
