@@ -1,0 +1,115 @@
+# =============================================================================
+#  What this repository publishes
+# =============================================================================
+#  COMMITTED : source code, methodology docs, and aggregate / pseudonymized
+#              results (outputs/public/ plus the name-free result JSONs).
+#  NEVER     : message content of any kind, real identities, and the large
+#              third-party corpora. Rules are path-anchored to the current
+#              layout — do not replace them with bare filenames.
+#
+#  See docs/ETHICS.md for the reasoning and docs/DATA.md for how to obtain the
+#  corpora from their original sources.
+# =============================================================================
+
+# ── real identities — the one file mapping people to pipeline keys ───────────
+config/team.json
+
+# ── raw corpora: real people's messages, and far too large for git ───────────
+# (Garimella alone is ~890 MB, above GitHub's 100 MB hard limit)
+data/raw/
+
+# ── parsed message streams: still verbatim message content ───────────────────
+data/clean/
+
+# ── feature matrices & labels keyed by real usernames ────────────────────────
+# The Nankani rows carry real full names plus institution, and opus_labels.json
+# pairs those names with behavioural judgements about the person.
+data/features/
+data/labels/
+
+# ── annotation study: the shared apps embed real chat transcripts ────────────
+outputs/annotation/sample_users.json
+outputs/annotation/answer_key_DO_NOT_SHARE.json
+outputs/annotation/annotator_*/
+outputs/annotation/*.zip
+# The returned label CSVs key their rows by the SOURCE-CORPUS username, and the
+# Nankani ones are real full names — so the originals stay private too. Copies
+# with opaque ids are also individual records and are not distributed.
+outputs/annotation/returned/
+
+# ── working results ──────────────────────────────────────────────────────────
+# outputs/results/ is the pipeline's private scratch space: some files name team
+# members, and prose notes inside otherwise-aggregate files do too. Results reach
+# the public repo through a selected-aggregate exporter and review. Keep this
+# a whole-directory rule
+# so a new result file is private by default rather than published by accident.
+outputs/results/
+
+# ── trained artifacts: large binaries, rebuildable from the pipeline ─────────
+outputs/models/
+
+# ── rendered deliverables: contain team members' names and per-person results
+archive/generated_deliverables/
+archive/old_results/
+archive/opus_labels.backup.json
+archive/*.zip
+archive/*.ipynb
+archive/kernel-metadata.json
+
+# ── legacy top-level names (kept so older checkouts stay clean) ──────────────
+database.sqlite
+*.sqlite
+slack_data/
+slack_clean.json
+slack_results.json
+reddit_raw.*
+reddit_clean.json
+reddit_raw.csv
+whatsapp_chat.txt
+whatsapp_groupchat.txt
+whatsapp_clean.json
+whatsapp_results.json
+whatsapp_features.json
+wa_features.json
+wa_results.json
+nankani_clean.json
+mbada_clean.json
+training_results*.json
+opus_labels.json
+
+# Only reviewed aggregate filenames belong in the public directory.
+outputs/public/*
+!outputs/public/README.md
+!outputs/public/ml_results.json
+!outputs/public/annotation_agreement.json
+!outputs/public/eval_vs_opus.json
+!outputs/public/feature_weights.json
+!outputs/public/feature_weights_perarch.json
+outputs/annotation/
+docs/assets/
+docs/*.pdf
+docs/*.pptx
+docs/text_features_table.png
+
+# ── Python / tooling ─────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.egg-info/
+.pytest_cache/
+.idea/
+.vscode/
+.DS_Store
+
+# ── virtual environments ─────────────────────────────────────────────────────
+SNA/
+venv/
+env/
+.venv/
+
+# Credentials and local experiments
+.env
+.env.*
+!.env.example
+outputs/demo/
+outputs/runs/

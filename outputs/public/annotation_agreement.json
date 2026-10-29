@@ -1,0 +1,44 @@
+{
+  "n_common": 50,
+  "headline": {
+    "human_vs_opus": {
+      "soft_accuracy": 0.7342,
+      "cosine": 0.8425,
+      "jsd": 0.0984,
+      "hard_agreement": 0.44,
+      "cohen_kappa": 0.3
+    },
+    "human_vs_human": {
+      "soft_accuracy": 0.6928,
+      "cosine": 0.7784,
+      "jsd": 0.1451,
+      "hard_agreement": 0.4,
+      "cohen_kappa": 0.2264
+    }
+  },
+  "krippendorff": {
+    "with_opus": {
+      "interval_per_dim": {
+        "bee": 0.0928,
+        "ant": 0.4303,
+        "butterfly": 0.5575,
+        "capybara": 0.3028,
+        "leech": 0.2276
+      },
+      "interval_avg": 0.3222,
+      "nominal_argmax": 0.2652
+    },
+    "humans_only": {
+      "interval_per_dim": {
+        "bee": 0.0263,
+        "ant": 0.5206,
+        "butterfly": 0.5698,
+        "capybara": 0.2074,
+        "leech": -0.1126
+      },
+      "interval_avg": 0.2423,
+      "nominal_argmax": 0.2014
+    }
+  },
+  "fleiss_kappa_all_raters": 0.2602
+}

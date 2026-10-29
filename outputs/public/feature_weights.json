@@ -1,0 +1,186 @@
+{
+  "fusion_metric_w": 0.5,
+  "note": "effective_weight = view_weight * within-view Gini importance; rows sum to 1.0",
+  "effective_importance": [
+    {
+      "view": "metric",
+      "feature": "emoji_ratio",
+      "in_view_importance": 0.1586,
+      "effective_weight": 0.0793
+    },
+    {
+      "view": "text-style",
+      "feature": "url_rate",
+      "in_view_importance": 0.1564,
+      "effective_weight": 0.0782
+    },
+    {
+      "view": "text-style",
+      "feature": "emoji_rate",
+      "in_view_importance": 0.136,
+      "effective_weight": 0.068
+    },
+    {
+      "view": "text-style",
+      "feature": "vader_compound",
+      "in_view_importance": 0.1242,
+      "effective_weight": 0.0621
+    },
+    {
+      "view": "metric",
+      "feature": "replies_sent",
+      "in_view_importance": 0.1038,
+      "effective_weight": 0.0519
+    },
+    {
+      "view": "metric",
+      "feature": "betweenness_centrality",
+      "in_view_importance": 0.0966,
+      "effective_weight": 0.0483
+    },
+    {
+      "view": "metric",
+      "feature": "harmony_score",
+      "in_view_importance": 0.0923,
+      "effective_weight": 0.0461
+    },
+    {
+      "view": "metric",
+      "feature": "emotion_density",
+      "in_view_importance": 0.0922,
+      "effective_weight": 0.0461
+    },
+    {
+      "view": "text-style",
+      "feature": "q_rate",
+      "in_view_importance": 0.086,
+      "effective_weight": 0.043
+    },
+    {
+      "view": "text-style",
+      "feature": "avg_len_norm",
+      "in_view_importance": 0.0815,
+      "effective_weight": 0.0408
+    },
+    {
+      "view": "metric",
+      "feature": "avg_msg_length",
+      "in_view_importance": 0.0778,
+      "effective_weight": 0.0389
+    },
+    {
+      "view": "text-style",
+      "feature": "emp_positive_emotion",
+      "in_view_importance": 0.0704,
+      "effective_weight": 0.0352
+    },
+    {
+      "view": "text-style",
+      "feature": "commit_rate",
+      "in_view_importance": 0.0628,
+      "effective_weight": 0.0314
+    },
+    {
+      "view": "metric",
+      "feature": "initiation_rate",
+      "in_view_importance": 0.0606,
+      "effective_weight": 0.0303
+    },
+    {
+      "view": "metric",
+      "feature": "avg_mentions",
+      "in_view_importance": 0.0586,
+      "effective_weight": 0.0293
+    },
+    {
+      "view": "metric",
+      "feature": "response_consistency",
+      "in_view_importance": 0.0572,
+      "effective_weight": 0.0286
+    },
+    {
+      "view": "metric",
+      "feature": "task_focus_score",
+      "in_view_importance": 0.056,
+      "effective_weight": 0.028
+    },
+    {
+      "view": "text-style",
+      "feature": "mention_rate",
+      "in_view_importance": 0.0545,
+      "effective_weight": 0.0273
+    },
+    {
+      "view": "metric",
+      "feature": "MATTR",
+      "in_view_importance": 0.0525,
+      "effective_weight": 0.0263
+    },
+    {
+      "view": "metric",
+      "feature": "question_ratio",
+      "in_view_importance": 0.0477,
+      "effective_weight": 0.0238
+    },
+    {
+      "view": "metric",
+      "feature": "in_out_ratio",
+      "in_view_importance": 0.046,
+      "effective_weight": 0.023
+    },
+    {
+      "view": "text-style",
+      "feature": "emp_achievement",
+      "in_view_importance": 0.0353,
+      "effective_weight": 0.0176
+    },
+    {
+      "view": "text-style",
+      "feature": "emp_communication",
+      "in_view_importance": 0.0346,
+      "effective_weight": 0.0173
+    },
+    {
+      "view": "text-style",
+      "feature": "emp_help",
+      "in_view_importance": 0.0323,
+      "effective_weight": 0.0161
+    },
+    {
+      "view": "text-style",
+      "feature": "emp_giving",
+      "in_view_importance": 0.0306,
+      "effective_weight": 0.0153
+    },
+    {
+      "view": "text-style",
+      "feature": "emp_work",
+      "in_view_importance": 0.026,
+      "effective_weight": 0.013
+    },
+    {
+      "view": "text-style",
+      "feature": "emp_negative_emotion",
+      "in_view_importance": 0.0251,
+      "effective_weight": 0.0126
+    },
+    {
+      "view": "text-style",
+      "feature": "emp_leader",
+      "in_view_importance": 0.0168,
+      "effective_weight": 0.0084
+    },
+    {
+      "view": "text-style",
+      "feature": "emp_affection",
+      "in_view_importance": 0.0161,
+      "effective_weight": 0.0081
+    },
+    {
+      "view": "text-style",
+      "feature": "emp_politeness",
+      "in_view_importance": 0.0115,
+      "effective_weight": 0.0058
+    }
+  ]
+}

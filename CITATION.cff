@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+title: "SocialCompass — Team Communication Analyzer (COIN Archetypes)"
+message: "If you use this software, please cite it as below."
+type: software
+abstract: >-
+  A portfolio edition of collaborative coursework on team communication analysis,
+  derived from the original SocialCompass implementation. It includes an offline
+  fictional-data feature demo, regression fixes, and selected historical aggregate
+  results, with individual records excluded and explicit interpretation limits.
+license: MIT
+repository-code: "https://github.com/kasra-mohebian/team-communication-analyzer"
+authors:
+  - name: "SocialCompass coursework contributors"
+keywords:
+  - social network analysis
+  - collaborative innovation networks
+  - team communication
+  - weak supervision
+  - soft labels
+  - inter-rater agreement
+references:
+  - type: book
+    authors:
+      - family-names: Gloor
+        given-names: "Peter A."
+    title: "Happimetrics: Leveraging AI to Untangle the Surprising Link Between Ethics, Happiness and Business Success"
+    year: 2022
+    publisher:
+      name: "Edward Elgar Publishing"
+  - type: conference-paper
+    authors:
+      - family-names: Chatterjee
+        given-names: Preetha
+      - family-names: Damevski
+        given-names: Kostadin
+      - family-names: Kraft
+        given-names: "Nicholas A."
+      - family-names: Pollock
+        given-names: Lori
+    title: "Software-related Slack Chats with Disentangled Conversations"
+    collection-title: "Proceedings of the 17th International Conference on Mining Software Repositories (MSR)"
+    year: 2020

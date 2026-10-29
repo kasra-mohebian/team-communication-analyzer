@@ -1,0 +1,37 @@
+{
+  "_comment": [
+    "Fictional local configuration example; not an original identity map.",
+    "Local aliases do not make real data anonymous. Never publish individual outputs."
+  ],
+  "members": [
+    {
+      "match": "alpha",
+      "key": "Alpha",
+      "alias": "Member 1"
+    },
+    {
+      "match": "bravo",
+      "key": "Bravo",
+      "alias": "Member 2"
+    },
+    {
+      "match": "charlie",
+      "key": "Charlie",
+      "alias": "Member 3"
+    },
+    {
+      "match": "delta",
+      "key": "Delta",
+      "alias": "Member 4"
+    },
+    {
+      "match": "echo",
+      "key": "Echo",
+      "alias": "Member 5"
+    }
+  ],
+  "group_author_markers": [
+    "my group name",
+    "grp -"
+  ]
+}
