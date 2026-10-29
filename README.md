@@ -135,3 +135,7 @@ The tests force the offline feature backends and cover parsing, probability vali
 The repository excludes real chat text, member profiles, per-user annotations, real interaction graphs, private identity maps, stored models and original course reports or slides. The demo is entirely fictional. The published results are selected training-wide summaries; the private small-team case study is excluded.
 
 This is personal portfolio work, not an official university publication or a claim of sole authorship. The original MIT notice is preserved. See [project provenance](UPSTREAM.md), [references](REFERENCES.md), [data provenance](docs/DATA.md) and [privacy scope](docs/ETHICS.md).
+
+## Acknowledgements
+
+We thank [Peter Gloor](https://www.linkedin.com/in/petergloor/) for his research on collaborative innovation networks and team communication, which informed the conceptual background of this project.
