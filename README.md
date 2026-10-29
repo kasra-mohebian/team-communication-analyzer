@@ -138,4 +138,4 @@ This is personal portfolio work, not an official university publication or a cla
 
 ## Acknowledgements
 
-We thank [Peter Gloor](https://www.linkedin.com/in/petergloor/) for his research on collaborative innovation networks and team communication, which informed the conceptual background of this project.
+We thank our course instructor, [Peter Gloor](https://www.linkedin.com/in/petergloor/), for his teaching and for helping us understand collaborative innovation networks and team communication.
