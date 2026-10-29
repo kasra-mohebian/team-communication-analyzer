@@ -5,6 +5,7 @@ The checker inspects actual files; it is not proof of legal clearance/anonymity.
 """
 import argparse
 import json
+import math
 import re
 import shutil
 import tempfile
@@ -29,11 +30,37 @@ def aggregate_ml_results(record):
     return {**{k: v for k, v in record.items() if k in ML_FIELDS},
             '_publication_scope': SCOPE}
 
-ANNOTATION_FIELDS = {'n_common', 'headline', 'krippendorff', 'fleiss_kappa_all_raters'}
+AGREEMENT_METRICS = dict.fromkeys(
+    ('soft_accuracy', 'cosine', 'jsd', 'hard_agreement', 'cohen_kappa'), 'number')
+KRIPPENDORFF_METRICS = {
+    'interval_per_dim': dict.fromkeys(('bee', 'ant', 'butterfly', 'capybara', 'leech'), 'number'),
+    'interval_avg': 'number', 'nominal_argmax': 'number',
+}
+ANNOTATION_SCHEMA = {
+    'n_common': 'count',
+    'headline': {'human_vs_opus': AGREEMENT_METRICS, 'human_vs_human': AGREEMENT_METRICS},
+    'krippendorff': {'with_opus': KRIPPENDORFF_METRICS, 'humans_only': KRIPPENDORFF_METRICS},
+    'fleiss_kappa_all_raters': 'number',
+}
+ANNOTATION_FIELDS = set(ANNOTATION_SCHEMA)
+
+def _select_annotation(node, schema, path='annotation_agreement'):
+    if schema == 'count':
+        if type(node) is not int or node < 0:
+            raise ValueError(f'{path}: non-negative integer required')
+        return node
+    if schema == 'number':
+        if type(node) not in (int, float) or not math.isfinite(node):
+            raise ValueError(f'{path}: finite numeric metric required')
+        return node
+    if not isinstance(node, dict):
+        raise ValueError(f'{path}: aggregate object required')
+    return {key: _select_annotation(value, schema[key], f'{path}.{key}')
+            for key, value in node.items() if key in schema}
 
 def aggregate_annotation_agreement(record):
     """Retain combined agreement, never rater identifiers or individual scores."""
-    return {key: value for key, value in record.items() if key in ANNOTATION_FIELDS}
+    return _select_annotation(record, ANNOTATION_SCHEMA)
 
 def audit_public_directory(folder, known_names=()):
     folder = Path(folder)
@@ -74,8 +101,12 @@ def audit_public_directory(folder, known_names=()):
                     errors.append(f'{name}: aggregate object required')
                 else:
                     visit(obj, name)
-                    if name == 'annotation_agreement.json' and set(obj) - ANNOTATION_FIELDS:
-                        errors.append(f'{name}: individual or unexpected annotation fields')
+                    if name == 'annotation_agreement.json':
+                        try:
+                            if aggregate_annotation_agreement(obj) != obj:
+                                errors.append(f'{name}: individual or unexpected annotation fields')
+                        except ValueError as error:
+                            errors.append(f'{name}: invalid annotation schema: {error}')
                     if name == 'ml_results.json' and set(obj) - ML_FIELDS - {'_publication_scope'}:
                         errors.append(f'{name}: unexpected summary fields')
             except ValueError:
