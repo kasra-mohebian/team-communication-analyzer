@@ -1,8 +1,8 @@
 # SocialCompass — Team Communication Analysis with NLP and Networks
 
-![Conceptual illustration: the fictional demo and historical research are separate paths; this is not a result chart.](docs/media/project-overview.jpg)
+![Technical concept illustration of the fictional feature-extraction demo and the separate historical research workflow; no real messages or results are shown.](docs/media/project-overview-technical.png)
 
-*Conceptual illustration: the fictional demo and historical research are separate paths; this is not a result chart.*
+*Technical concept illustration of the fictional feature-extraction demo and the separate historical research workflow; no real messages or results are shown.*
 
 [![Offline checks](https://github.com/kasra-mohebian/team-communication-analyzer/actions/workflows/tests.yml/badge.svg)](https://github.com/kasra-mohebian/team-communication-analyzer/actions/workflows/tests.yml)
 
