@@ -60,7 +60,7 @@ The course research used two views of the same conversations:
 1. **Behaviour and network:** 13 features, including message length, questions, mentions, inferred replies and network centrality.
 2. **Text style:** 17 lexical rates and averages, including sentiment, supportive language, links and commitments.
 
-Most training reference labels came from an external language model; the 53 fictional users have fixed soft-label distributions in `label_synthetic.py`; their human versus LLM-assisted authoring process is not documented. Each label was a soft distribution across five exploratory communication roles, rather than one fixed verdict:
+Most training reference labels came from an external language model. The 53 fictional users have fixed label distributions in `label_synthetic.py`; the records do not establish whether those labels were written by a person or with LLM assistance. Each label gives a distribution across five exploratory communication roles, rather than a single fixed classification:
 
 | Research category | Communication pattern explored |
 |---|---|
@@ -72,7 +72,7 @@ Most training reference labels came from an external language model; the 53 fict
 
 These are the project's research categories, not personality diagnoses or measures of a person's value. In particular, low chat activity does not establish low contribution to the wider project.
 
-“Low-reciprocity” is the public display name for the historical `leech` key. It describes an observed pattern, not a person's value or contribution.
+“Low-reciprocity” is the display name used here for the historical `leech` key.
 
 Two regressors learn those distributions from the separate feature views. **Late fusion** means combining their predicted distributions with a weighted average.
 
